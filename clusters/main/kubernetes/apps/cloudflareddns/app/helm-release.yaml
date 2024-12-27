@@ -34,7 +34,7 @@ spec:
       api_token: ${DOMAIN_0_CLOUDFLARE_TOKEN}
       interval: 300
       detect_mode: dig-whoami.cloudflare
-      detect:override: ""
+      detect_override: ""
       log_level: 3
       host_zone_record:
         - domain: ${DDNS_URL}
