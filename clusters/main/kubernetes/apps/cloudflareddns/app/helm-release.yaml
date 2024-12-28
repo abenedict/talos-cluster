@@ -1,4 +1,6 @@
-apiVersion: helm.toolkit.fluxcd.io/v2
+---
+# yaml-language-server: $schema=https://kubernetes-schemas.pages.dev/helm.toolkit.fluxcd.io/helmrelease_v2.json
+apiVersion: helm.toolkit.fluxcd.io/v2beta2
 kind: HelmRelease
 metadata:
   name: cloudflareddns
@@ -8,7 +10,7 @@ spec:
   chart:
     spec:
       chart: cloudflareddns
-      version: 11.2.3
+      version: 11.3.1
       sourceRef:
         kind: HelmRepository
         name: truecharts
@@ -29,14 +31,13 @@ spec:
   uninstall:
     keepHistory: false
   values:
+    TZ: America/Chicago
     cloudflareddns:
-      user: ${DOMAIN_0_EMAIL}
-      api_token: ${DOMAIN_0_CLOUDFLARE_TOKEN}
-      #interval: 300
-      #detect_mode: dig-whoami.cloudflare
-      #detect_override: ""
-      #log_level: 3
-      host_zone_record:
-        - domain: ${DDNS_URL}
-          zone: ${DOMAIN_0}
-          record: A
+            api_key: ${DOMAIN_0_CLOUDFLARE_API_KEY}
+            host_zone_record:
+                - domain: ${DDNS_URL}
+                  record: A
+                  zone: ${DOMAIN_0}
+            interval: 300
+            log_level: 3
+            user: ${DOMAIN_0_EMAIL}
