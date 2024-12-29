@@ -35,7 +35,7 @@ spec:
     cloudflareddns:
       api_key: ${DOMAIN_0_CLOUDFLARE_API_KEY}
       host_zone_record:
-        - domain: ${DDNS_URL}
+        - domain: ${DOMAIN_0}
           record: A
           zone: ${DOMAIN_0}
       interval: 300
