@@ -33,11 +33,12 @@ spec:
   values:
     TZ: America/Chicago
     cloudflareddns:
-            api_key: ${DOMAIN_0_CLOUDFLARE_API_KEY}
-            host_zone_record:
-                - domain: ${DDNS_URL}
-                  record: A
-                  zone: ${DOMAIN_0}
-            interval: 300
-            log_level: 3
-            user: ${DOMAIN_0_EMAIL}
+      api_key: ${DOMAIN_0_CLOUDFLARE_API_KEY}
+      host_zone_record:
+          - domain: ${DDNS_URL}
+            record: A
+            zone: ${DOMAIN_0}
+      interval: 300
+      log_level: 3
+      user: ${DOMAIN_0_EMAIL}
+    
