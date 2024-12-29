@@ -38,7 +38,5 @@ spec:
         - domain: ${DOMAIN_0}
           record: A
           zone: ${DOMAIN_0}
-      interval: 300
-      log_level: 3
       user: ${DOMAIN_0_EMAIL}
     
