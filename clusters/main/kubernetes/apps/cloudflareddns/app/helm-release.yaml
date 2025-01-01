@@ -33,7 +33,7 @@ spec:
   values:
     TZ: America/Chicago
     cloudflareddns:
-      api_key: ${DOMAIN_0_CLOUDFLARE_TOKEN}
+      api_token: ${DOMAIN_0_CLOUDFLARE_TOKEN}
       host_zone_record:
       - domain: ${DOMAIN_0}
         record: A
