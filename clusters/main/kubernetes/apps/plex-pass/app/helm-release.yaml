@@ -38,6 +38,7 @@ spec:
         secretKey: ${BACKBLAZE_SECRET_KEY}
         type: s3
         url: https://s3.us-west-000.backblazeb2.com
+        encrKey: ""
     plex:
       # User Defined
       serverIP: ${PLEX_IP}
