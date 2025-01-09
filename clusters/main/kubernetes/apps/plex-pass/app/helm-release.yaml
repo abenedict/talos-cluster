@@ -16,7 +16,7 @@ spec:
         name: truecharts
         namespace: flux-system
       interval: 15m
-  timeout: 45m
+  timeout: 20m
   maxHistory: 3
   install:
     createNamespace: true
@@ -38,7 +38,7 @@ spec:
         secretKey: ${BACKBLAZE_SECRET_KEY}
         type: s3
         url: https://s3.us-west-000.backblazeb2.com
-        encrKey: MYSECRETPASSPHRASE
+        encrKey: ${BACKBLAZE_ENCR_KEY}
     plex:
       # User Defined
       serverIP: ${PLEX_IP}
