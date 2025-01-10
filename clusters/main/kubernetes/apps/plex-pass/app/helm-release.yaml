@@ -81,7 +81,7 @@ spec:
              enabled: true
             name: plex-pass-volsync-config
             src:
-              enabled: true
+              enabled: false
             type: restic
       transcode:
         enabled: true
