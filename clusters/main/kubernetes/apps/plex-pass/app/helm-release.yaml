@@ -33,8 +33,6 @@ spec:
       Backblaze:
         accessKey: ${BACKBLAZE_ACCESS_KEY}
         bucket: volsync-plex-pass
-        name: Backblaze
-        path: ""
         secretKey: ${BACKBLAZE_SECRET_KEY}
         type: s3
         url: https://s3.us-west-000.backblazeb2.com
@@ -71,21 +69,10 @@ spec:
         mountPath: /media
         server: ${NFS_SERVER}
       config:
-        enabled: true
-        mountPath: /config
-        readOnly: false
-        storageClass: ""
         volsync:
           - credentials: Backblaze
             dest:
              enabled: true
-            name: plex-pass-volsync-config
             src:
-              enabled: false
+              enabled: true
             type: restic
-      transcode:
-        enabled: true
-        medium: Memory
-        mountPath: /transcode
-        targetSelectAll: true
-        type: emptyDir
