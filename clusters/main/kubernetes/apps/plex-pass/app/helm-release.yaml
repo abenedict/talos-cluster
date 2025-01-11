@@ -70,7 +70,7 @@ spec:
         server: ${NFS_SERVER}
       config:
         volsync:
-          - name: plex-pass-volsync-config
+          - name: config
             type: restic
             credentials: Backblaze
             dest:
