@@ -70,9 +70,10 @@ spec:
         server: ${NFS_SERVER}
       config:
         volsync:
-          - credentials: Backblaze
+          - name: config
+            type: restic
+            credentials: Backblaze
             dest:
              enabled: true
             src:
               enabled: true
-            type: restic
