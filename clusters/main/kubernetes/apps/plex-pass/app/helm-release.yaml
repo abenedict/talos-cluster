@@ -77,3 +77,9 @@ spec:
              enabled: true
             src:
               enabled: true
+    resources:
+        limits:
+          gpu.intel.com/i915: "1"
+        requests:
+          gpu.intel.com/i915: "1"
+
