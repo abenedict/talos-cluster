@@ -14,5 +14,3 @@ resources:
   - system-upgrade-controller/ks.yaml
   - traefik-crds/ks.yaml
   - volsync/ks.yaml
-  - intel-gpu-plugin/ks.yaml
-  - intel-device-plugins-gpu/ks.yaml
