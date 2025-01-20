@@ -38,3 +38,10 @@ spec:
     service:
       tcp:
         loadBalancerIP: ${TRAEFIK_IP}
+    middlewares:
+      ipWhiteList: []
+        - name: internal-only
+        sourceRange: []
+          - 192.168.0.0/16
+          - 172.16.0.0/12
+          - 10.0.0.0/8
