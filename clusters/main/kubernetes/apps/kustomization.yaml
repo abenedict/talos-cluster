@@ -4,3 +4,4 @@ resources:
   - kubernetes-dashboard/ks.yaml
   - cloudflareddns/ks.yaml
   - plex-pass/ks.yaml  - transmission-vpn
+  - transmission-vpn/ks.yaml
